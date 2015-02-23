@@ -16,6 +16,8 @@ public class AutoboxingFun {
 
 	public static void main(String[] args) {
 
+		System.out.println("Experiment 1");
+		
 		Integer a = new Integer(5);
 		Integer b = new Integer(5);
 
@@ -54,18 +56,18 @@ public class AutoboxingFun {
 		System.out.println("i == j\t\t" + (i == j));
 		System.out.println("i.equals(j)\t" + i.equals(j));
 
-		System.out.println();
+		System.out.println("\nExperiment 2");
 
 		Long lng = 0L;
 		for (int y = 0; y < 1 << 26; y++) { // 1 << 26 aka 2^26 aka 67_108_864
 			lng += y;
 		}
 
-		System.out.println();
+		System.out.println("\nExperiment 3");
 
 		System.out.println("Sum of even elements: " + sumEven(Arrays.asList(1,2,3,4,5,6,7,8,9,10)));
 		
-		System.out.println();
+		System.out.println("\nExperiment 4");
 		
 		overloadedMethod(1);
 		overloadedMethod(new Integer(1));
@@ -82,7 +84,7 @@ public class AutoboxingFun {
 		al.remove(indexB);
 		System.out.println("List size: " + al.size());
 
-		System.out.println();
+		System.out.println("\nExperiment 5");
 
 		int x = gimmeInteger();
 		System.out.println(x);
@@ -97,8 +99,8 @@ public class AutoboxingFun {
 	public static int sumEven(List<Integer> li) {
 		int sum = 0;
 		for (Integer i : li) {
-			if (i % 2 == 0) {
-				sum += i;
+			if (i % 2 == 0) {	// i.intValue() % 2 == 0
+				sum += i;		// sum += i.intValue()
 			}
 		}
 		return sum;
