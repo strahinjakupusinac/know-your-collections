@@ -53,6 +53,7 @@ public class ArraysFun {
 		System.out.println(Arrays.hashCode(arrayC));
 		System.out.println(Arrays.deepHashCode(arrayC));
 		
+		
 		System.out.println("\nExperiment 7");
 
 		// works only for String[]
